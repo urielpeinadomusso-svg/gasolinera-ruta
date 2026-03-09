@@ -1,0 +1,156 @@
+# .gitignore para proyecto Ren'Py + Python + assets pesados
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Python / bytecode / entornos virtuales ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+env.bak/
+venv.bak/
+pip-wheel-metadata/
+pip-delete-this-directory.txt
+.python-version
+
+# --- Paquetes, builds y caches de Python ---
+build/
+dist/
+*.egg-info/
+.eggs/
+parts/
+sdist/
+wheels/
+pip-log.txt
+pip-log.*
+.pytest_cache/
+.mypy_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+nosetests.xml
+coverage.xml
+*.log
+*.sqlite
+*.sqlite3
+
+# --- Ren'Py: archivos compilados, cachés y salidas ---
+# Ignora archivos .rpyc (compilados) y carpetas temporales creadas por Ren'Py
+*.rpyc
+compiled/
+game/compiled/
+cache/
+renpy-cache/
+logs/
+log.txt
+log.*
+logold.txt
+persistent
+saves/
+save/
+old/
+build/
+dist/
+export/
+renpy-sdk/
+packages/
+bin/
+android/
+*.apk
+*.obb
+
+# --- Assets pesados / fuentes / archivos de proyecto (no subir al repo) ---
+# Coloca tus raw/source grandes en carpetas listadas abajo para que git los ignore
+/assets_raw/
+/assets_source/
+/assets/heavy/
+/video_sources/
+/renders/
+/audio_stems/
+/source_media/
+/tmp_assets/
+/cache_audio/
+/tmp_video/
+/export_media/
+
+# Tipos de archivo pesados habitualmente ignorados (imágenes fuente, audio sin comprimir, vídeo, proyectos)
+*.psd
+*.psb
+*.kra
+*.xcf
+*.blend
+*.fbx
+*.obj
+*.3ds
+*.dae
+*.aep
+*.aepx
+*.prproj
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.wav
+*.flac
+*.aiff
+*.aif
+*.exr
+*.tga
+*.raw
+*.nef
+*.cr2
+*.arw
+*.dng
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+
+# --- Herramientas / editores / IDEs ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# --- Archivos temporales y de backup ---
+*.tmp
+*.temp
+*.swp
+*~
+.~*
+*.bak
+*.orig
+
+# --- Contenedores / dependencias locales / sistema de compilación ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+bower_components/
+
+# --- Metadatos del sistema / miniaturas ---
+Thumbs.db
+ehthumbs.db
+*.DS_Store
+*.Spotlight-V100
+.Trashes
+
+# --- Otros archivos generados / CI caches local ---
+.cache/
+.vagrant/
+*.log
+
+# --- Reglas útiles (si quieres versionar assets finales, coméntalas) ---
+# Mantén track de las imágenes y audios optimizados del juego (por ejemplo /game/images/ y /game/audio/)
+# Si tu flujo guarda los fuentes pesados en otras carpetas, ajusta las rutas previas.
